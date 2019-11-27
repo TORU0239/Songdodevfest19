@@ -28,6 +28,7 @@ import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import sg.toru.songdodevfest19.R
+import sg.toru.songdodevfest19.core.ImageClassifier
 
 /**
  * A simple [Fragment] subclass.
@@ -42,9 +43,9 @@ class CameraFragment : Fragment() {
     private lateinit var container:ConstraintLayout
     private lateinit var viewFinder:TextureView
 
-//    private val imageClassifier:ImageClassfier by lazy {
-//        ImageClassfier()
-//    }
+    private val imageClassifier: ImageClassifier by lazy {
+        ImageClassifier()
+    }
 
     private val executor:ExecutorService by lazy {
         Executors.newSingleThreadExecutor()
